@@ -4,73 +4,53 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background: #121212; /* темный фон */
-	color: #fff;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(-45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+	background-size: 400% 400%;
+	animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .card {
-	background: #1e1e1e; /* темная карточка */
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
 	padding: 30px 40px;
-	border-radius: 20px;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 	text-align: center;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
-}
-
-h1 {
-	font-size: 28px;
-	margin-bottom: 10px;
-	color: #ff6b81; /* акцентный цвет */
-}
-
-h2 {
-	font-size: 20px;
-	margin-bottom: 20px;
-	color: #feca57;
+	color: white;
 }
 
 input,
 button {
-	padding: 12px 20px;
-	border-radius: 12px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 8px;
 	font-size: 16px;
-	outline: none;
-	transition: all 0.3s ease;
 }
 
 input {
 	width: 160px;
-	margin-right: 10px;
-	border: 1px solid #444;
-	background: #2a2a2a;
-	color: #fff;
-}
-
-input:focus {
-	border-color: #ff6b81;
-	box-shadow: 0 0 8px rgba(255, 107, 129, 0.5);
+	margin-right: 8px;
 }
 
 button {
-	background: #ff6b81;
+	background: #222;
 	color: white;
-	border: none;
 	cursor: pointer;
 }
 
 button:hover {
-	background: #ff4c6a;
-	transform: scale(1.05);
-}
-
-p {
-	margin-top: 15px;
-	font-size: 16px;
-	color: #f1f1f1;
+	background: #000;
 }
